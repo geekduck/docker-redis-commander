@@ -23,3 +23,10 @@ If you want to pass additional arguments:
     docker run -d --link redis_container:redis --name redis-commander -p 8081:8081 geekduck/redis-commander \
     --redis-password="PASSWORD" \
     --redis-db=1
+
+
+If you want to persist connection settings:
+
+    docker run -d --link redis_container:redis --name redis-commander -p 8081:8081 \
+    -v <PATH_TO_SAVE_DIR>/.redis-commander:/root/.redis-commander \
+    geekduck/redis-commander
