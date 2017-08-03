@@ -1,4 +1,4 @@
-FROM mhart/alpine-node:7
+FROM mhart/alpine-node:8
 MAINTAINER KAMO Yasuhiro <duck1218+github@gmail.com>
 
 RUN npm install -g redis-commander
